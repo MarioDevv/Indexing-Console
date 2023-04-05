@@ -1,13 +1,61 @@
-const fs = require('fs');
+// Index URL Command
+let indexUrl = (value) => {
+    value = value.replace(/\s/g, ',');
+    let url = value.split(',');
+    url.shift();
+    IndexUrl(url);
+}
+
+// Clear Prompt Command
+let clearPrompt = () => {
+    $('#output').empty();
+    let div = $('<div class="flex"></div>');
+    let span = $('<span class="text-green-400">indexer:~$</span>');
+    let input = $('<input type="text" class="w-full pl-2 text-gray-100 bg-gray-800 outline-0">');
+    div.append(span);
+    div.append(input);
+    $('#output').append(div);
+    $(input).trigger('focus');
+}
+
+
+
+// Line Prompt Events 
+$('#output').on('change', function (e) {
+    let actualTarget = e.target;
+    if (e.target.nodeName === 'INPUT') {
+        $(actualTarget).on('keyup', function (e) {
+            if (e.keyCode === 13) {
+                if ($(actualTarget).val().includes('ind')) {
+                    indexUrl($(actualTarget).val());
+                }
+                if ($(actualTarget).val() == 'clear' || $(actualTarget).val() == 'cls') {
+                    clearPrompt();
+                }
+                else {
+                    let div = $('<div class="flex"></div>');
+                    let span = $('<span class="text-green-400">indexer:~$</span>');
+                    let input = $('<input type="text" class="w-full pl-2 text-gray-100 bg-gray-800 outline-0">');
+                    div.append(span);
+                    div.append(input);
+                    $('.flex').last().after(div);
+                    $(actualTarget).attr('disabled', true);
+                    $(input).trigger('focus');
+                }
+            }
+        });
+    }
+});
+
 
 let IndexUrl = () => {
+    const fs = require('fs');
     var request = require('request');
     var { google } = require('googleapis');
     var key = require('../../private/key.json');
 
-    fs.appendFile('urls.txt', 'https://example.com', function (err) {
+    fs.appendFile('../../private/urls.txt', 'https://example.com', function (err) {
         if (err) throw err;
-        console.log('Saved!');
     });
 
     const jwtClient = new google.auth.JWT(
@@ -60,4 +108,3 @@ let IndexUrl = () => {
     });
 }
 
-IndexUrl("https://example.com");
