@@ -1,7 +1,7 @@
 const fs = require('fs');
 var request = require('request');
 var { google } = require('googleapis');
-var key = require('./service_account.json');
+var key = require('../../private/key.json');
 
 fs.appendFile('urls.txt', '\nhttps://www.example.com/', function (err) {
     if (err) throw err;
@@ -17,7 +17,7 @@ const jwtClient = new google.auth.JWT(
 );
 
 const batch = fs
-    .readFileSync('../../dist/urls.txt')
+    .readFileSync('../../private/urls.txt')
     .toString()
     .split('\n');
 

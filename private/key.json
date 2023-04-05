@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "copper-aloe-382607",
+  "private_key_id": "ad7739acfffa1d0e2ebe678c488b1de1d611f7b5",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCc+aktpfaFhEje\ngvu9742KHeWrsQu55cMcLXuQd+X5ektzR2oUZo/zmYsRqfQeqGGgD2NxKgz72FOX\nDOWN/eXjgYoqaJt0H1DsOPNTA42a7mmSWdvX6c0yxKxzycQoE+S8kNcP1oDPvZRY\nZgBHJ9pgGPeSOw+fzTem8lE4SLlrpEp1l29/ps1MlfmJ0Pdyc/cZbhFIhEdnP4i2\neC+WsmQ/cgph3dNiM1GD3OtoMgDsIiQ3/TXvLHV0GitO371ndWiKsClw+RxADMGG\nL/E4rSs6CUBQMp2XJU1j53SA9ecWp5LFmLgvJaU0Ho85VXaX3DyBPA3Gl+8zPbwk\niqUuXtt1AgMBAAECggEABdWKmeF58tbqjWiRWisR1+EKFPJA1REqyfyPw9wM7lOD\nA98S3Hy+W2eowUiPg+cur6/6um09a8vLuYi3bGpUFbtOCwr1wiBa1di9BGgUpn43\nasLPtqvgHkOshCYq1fF9VhvM/m/yvCXX4lwyJPLgfSNYajUrPL14FMqbRawARjWX\nTBzPLvh8SP9I0yOVosiCAEiexDiPR8Pu06otkQyTZU70bInx9Ug79k3GOTiKeXmC\nX0mszJoKoD9P+bCYDgI54Xr66J7rr+Ylr8/PVSKcNFRTjEQ+C8kUHOwVe3/d1T48\nMRJZVvYB01Rq8SIC7GBIupSaYA8jacq4E0Cg6H9vOQKBgQDQqwb4ZRFOWOMCGvNa\nz8H+sRhrIclXyA1mdzwx53z1S1SqHrgm2O9VgaYfCFG8HkychoObXNDmtfoxZUYe\nuozNThfWlf4nV6IsRJnrf+VaNAr1MpkaYHD7PloNDL+6auLQ1an/7T6GsUTUTZaB\nyIqVAX+TiHvw2n9tV+A5t2aUXQKBgQDAlOze3JvuyAWzJtQSQe89nL2xn78CMMp+\nkWxCtkMGBbVoF86E6lvXzB1caoQZ0Oj2rNG/ichJehrNiIgsci4duWrM3f5dypx/\nPehoDLW0EwyFb90B1NDd03KdBT2gxRc+FPny2FGOdgCq92rDr9h868WFVwsMhDBU\nh82V4tHx+QKBgCGy/TUwXVMh18eHQrXvx4yyXRcwJawfisp5hycoE24p9EplG6hq\ncHyGq6VnWove+NBuiOKWYsZfrUA88s4TopmlewQUxS7lYDN2AMWfqhKfRQXEXiV8\nXcK1lyV0YaJhkK/ZUdMbJXXrOwpuXVgoYvkdfNT+vcVwBBRMlNG9ZLuhAoGAQ5wF\nDLimhc3zMlIPYdmEBD1i21kZ1csLTCQBven+3b5jUYgKGN+uHrSqGifK+MU/BFrn\nyDa2+hTEFCQ6ql/rkMPnmsTU6FiZWJKDZQQRRobpfm8nR91O9pGlSzrrx+Vpo4H5\nvifzefAzi9IQyWKSvkiHr6g/WMWPsh17L4PR8QECgYEAquM026HOalfDoJhNWznG\niWbuWgb5jLwXfOACyyL5+j/bS2Vn48sLO4rXw9EOP4LXtcAV1e8KDNTJR275I4W4\nu+1YmrzZ0EYu5LWmkKB6qHCeKiIJ1anmt60g7uZpnbZUztPKEiSjcbabN89odFoO\nwBjlK/0rcMQfX01QCrf2tMs=\n-----END PRIVATE KEY-----\n",
+  "client_email": "api-test@copper-aloe-382607.iam.gserviceaccount.com",
+  "client_id": "108112579760615547935",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/api-test%40copper-aloe-382607.iam.gserviceaccount.com"
+}
