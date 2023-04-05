@@ -18,11 +18,9 @@ app.get('/api/index', (req, res) => {
     );
 
     const batch = fs
-        .readFileSync('../../private/urls.txt')
+        .readFileSync('urls.txt')
         .toString()
         .split('\n');
-
-    console.log(batch);
 
     jwtClient.authorize(function (err, tokens) {
         if (err) {
@@ -54,11 +52,10 @@ app.get('/api/index', (req, res) => {
             multipart: items
         };
         request(options, (err, resp, body) => {
-            console.log(body);
+            res.send(JSON.stringify(body));
         });
     });
 
-    res.send({'Indexing': 'Done!'});
 });
 
 app.listen(3000, () => {
