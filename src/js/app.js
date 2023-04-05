@@ -11,12 +11,12 @@ let clearPrompt = () => {
 }
 
 // Fetching Data from API
-let indexURL = () => {
-    fetch('http://localhost:3000/api/index')
-        .then(res => res.json())
-        .then(data => {
-            console.log(data);
-        });
+let indexURL = async () => {
+    console.log('indexing...');
+    const response = await fetch('/api/index');
+    const jsonData = await response.json();
+    console.log(jsonData);
+
 }
 
 
@@ -27,6 +27,7 @@ $('#output').on('change', function (e) {
         $(actualTarget).on('keyup', function (e) {
             if (e.keyCode === 13) {
                 if ($(actualTarget).val().startsWith('ind ')) {
+                    console.log('indexing...');
                     indexURL();
                 } if ($(actualTarget).val() == 'clear' || $(actualTarget).val() == 'cls') {
                     clearPrompt();
