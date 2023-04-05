@@ -1,36 +1,56 @@
-// DOM Elements
-let userinput = document.getElementById("user-input");
-let output = document.getElementById("output");
-// Variables
-let cont = 0;
+// Event shwn new input added 
+$('#output').on('change', function (e) {
+    let actualTarget = e.target;
+    if (e.target.nodeName === 'INPUT') {
+        $(actualTarget).on('keyup', function (e) {
+            if (e.keyCode === 13) {
 
-
-// Event Listeners
-userinput.addEventListener("keydown", function (e) {
-    let div = document.createElement("div");
-    div.classList.add("flex");
-    if (e.key === "Enter") {
-        cont++;
-        div.innerHTML = `<span class="text-green-400">indexer:~$</span><input id=${cont} type="text" class="pl-2 text-gray-100 bg-gray-800 w-full outline-0" >`;
-        output.appendChild(div);
-        document.getElementById(cont).focus();
-        userinput.disabled = true;
-
-        let inputs = document.querySelectorAll("input");
-        inputs.forEach((input) => {
-            input.addEventListener("keydown", (e) => {
-                if (e.key === "Enter") {
-                    let div = document.createElement("div");
-                    div.classList.add("flex");
-                    if (e.key === "Enter") {
-                        cont++;
-                        div.innerHTML = `<span class="text-green-400">indexer:~$</span><input id=${cont} type="text" class="pl-2 text-gray-100 bg-gray-800 w-full outline-0" >`;
-                        output.appendChild(div);
-                        document.getElementById(cont).focus();
-                        userinput.disabled = true;
-                    }
+                if ($(actualTarget).val().includes('ind')) {
+                    indexUrl($(actualTarget).val());
                 }
-            });
+
+                if ($(actualTarget).val() == 'clear' || $(actualTarget).val() == 'cls') {
+                    clearPrompt();
+                }
+                else {
+                    let div = $('<div class="flex"></div>');
+                    let span = $('<span class="text-green-400">indexer:~$</span>');
+                    let input = $('<input type="text" class="w-full pl-2 text-gray-100 bg-gray-800 outline-0">');
+                    div.append(span);
+                    div.append(input);
+                    $('.flex').last().after(div);
+                    $(actualTarget).attr('disabled', true);
+                    $(input).trigger('focus');
+
+                }
+
+
+
+            }
         });
     }
 });
+
+
+// Commands
+
+let indexUrl = (value) => {
+
+    let url = value.split('ind ')[1];
+    
+}
+
+let clearPrompt = () => {
+    $('#output').empty();
+    let div = $('<div class="flex"></div>');
+    let span = $('<span class="text-green-400">indexer:~$</span>');
+    let input = $('<input type="text" class="w-full pl-2 text-gray-100 bg-gray-800 outline-0">');
+    div.append(span);
+    div.append(input);
+    $('#output').append(div);
+    $(input).trigger('focus');
+
+}
+
+
+
