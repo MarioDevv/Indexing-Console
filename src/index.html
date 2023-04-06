@@ -1,47 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/dist/output.css">
-    <script src="https://code.jquery.com/jquery-3.6.4.js"
-        integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/04b488092a.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/dist/output.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.js"
+      integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/04b488092a.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap"
+      rel="stylesheet"
+    />
     <title>Indexer</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <main class="h-screen w-full flex justify-center items-center bg-[#e3f6f5]">
-        <div class="w-3/4 h-2/3">
-            <div
-                class="h-full px-5 pt-4 overflow-hidden font-mono text-sm text-gray-100 bg-gray-800 rounded-lg drop-shadow-2xl">
-                <div class="flex justify-between">
-                    <div class="flex mb-2 top">
-                        <div class="w-3 h-3 bg-red-500 rounded-full"></div>
-                        <div class="w-3 h-3 ml-2 bg-orange-300 rounded-full"></div>
-                        <div class="w-3 h-3 ml-2 bg-green-500 rounded-full"></div>
-                    </div>
-                    <div id="info" class="relative mb-2 top">
-                        <i class="fa-solid fa-circle-info fa-lg"></i>
-                    </div>
-                </div>
-                <div id='output' class="flex flex-col mb-4 overflow-y-auto h-[90%]">
-                    <div class="flex">
-                        <span class="text-green-400">indexer:~$</span>
-                        <p class="items-center pl-2 typing">Paste below the url you want to index...</p>
-                    </div>
-                    <div class="flex">
-                        <span class="text-green-400">indexer:~$</span>
-                        <input type="text" class="w-full pl-2 text-gray-100 bg-gray-800 outline-0">
-                    </div>
-                </div>
+      <div class="w-3/4 h-2/3">
+        <div
+          class="h-full px-5 pt-4 overflow-hidden text-sm text-gray-100 bg-gray-800 rounded-lg drop-shadow-2xl"
+        >
+          <div class="flex justify-between">
+            <div class="flex mb-2 top">
+              <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+              <div class="w-3 h-3 ml-2 bg-orange-300 rounded-full"></div>
+              <div class="w-3 h-3 ml-2 bg-green-500 rounded-full"></div>
             </div>
+            <div id="info" class="relative mb-2 top">
+              <i class="fa-solid fa-circle-info fa-lg"></i>
+            </div>
+          </div>
+          <div id="output" class="flex flex-col mb-4 overflow-y-auto h-[90%]">
+            <div class="flex">
+              <span class="text-green-400">indexer:~$</span>
+              <p class="items-center pl-2 typing">
+                Paste below the url you want to index...
+              </p>
+            </div>
+            <div class="flex">
+              <span class="text-green-400">indexer:~$</span>
+              <input
+                type="text"
+                class="w-full pl-2 text-gray-100 bg-gray-800 outline-0"
+              />
+            </div>
+          </div>
         </div>
+      </div>
     </main>
-
     <script src="/src/js/app.js"></script>
-</body>
-
+  </body>
 </html>
