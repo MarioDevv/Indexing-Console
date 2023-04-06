@@ -1,7 +1,6 @@
 const express = require("express");
 const request = require("request");
 const { google } = require("googleapis");
-const key = require("../private/key.json");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 
@@ -15,6 +14,8 @@ app.post("/api/index", (req, res) => {
   });
   url.shift();
 
+  const key = req.body.key;
+  const batch = url;
   const jwtClient = new google.auth.JWT(
     key.client_email,
     null,
@@ -23,7 +24,6 @@ app.post("/api/index", (req, res) => {
     null
   );
 
-  const batch = url;
   jwtClient.authorize(function (err, tokens) {
     if (err) {
       console.log(err);
@@ -58,6 +58,7 @@ app.post("/api/index", (req, res) => {
       res.send(JSON.stringify(body));
     });
   });
+
 });
 
 app.listen(3000, () => {
