@@ -30,9 +30,19 @@ First of all we launch the server.
 node .\src\services\server.js
 ```
 
-Secondly we just serve our index.html, ¡!
+Secondly we just serve our index.html.  The index must be running on live server if not will not work.
 
+Lastly you just need to run the command prompts to start with the indexing. Here are the commands:
 
+```bash
+ind [urls...] - Index a URL. To index more than one url they must be separated by spaces. 
+
+cls/clear - Clear the terminal.
+
+upload - Prompts you the input to upload your credentials. *obligaroty*
+
+whoami - Its me :O!.
+```
 
 ## Examples
 
