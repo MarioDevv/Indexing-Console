@@ -1,5 +1,4 @@
 const express = require("express");
-const fs = require("fs");
 const request = require("request");
 const { google } = require("googleapis");
 const key = require("../private/key.json");
