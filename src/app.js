@@ -73,12 +73,6 @@ let createMessage = (data) => {
   $(input).attr("disabled", true);
 };
 
-// Clear Prompt Command
-let clearPrompt = () => {
-  $("#output").empty();
-  nextPrompt();
-};
-
 // whoami Command
 let whoami = () => {
   let div = $("<div></div>");
@@ -138,3 +132,9 @@ $("#output").on("change", "#file", function (e) {
     localStorage.setItem("credentials", JSON.stringify(credentials));
   };
 });
+
+// Clear Prompt Command
+let clearPrompt = () => {
+  $("#output").empty();
+  nextPrompt();
+};
