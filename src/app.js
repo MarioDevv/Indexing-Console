@@ -105,7 +105,8 @@ $("#info").on("click", function (e) {
     `<p class="text-gray-100">ind [url] - Index a URL</p>
       <p class="text-gray-100">cls/clear - Clear the terminal</p>
       <p class="text-gray-100">upload - Upload Google credentials file</p>
-      <p class="text-gray-100">whoami - Its me :O!</p>` 
+      <p class="text-gray-100">whoami - Its me :O!</p>
+      <h1 class="text-gray-100"> --------- Commands --------- </h1>`
   );
   info.append(tittle);
   info.append(text);

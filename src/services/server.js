@@ -58,7 +58,6 @@ app.post("/api/index", (req, res) => {
       res.send(JSON.stringify(body));
     });
   });
-
 });
 
 app.listen(3000, () => {
