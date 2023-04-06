@@ -104,7 +104,7 @@ $("#info").on("click", function (e) {
   let text = $(
     `<p class="text-gray-100">ind [url] - Index a URL</p>
       <p class="text-gray-100">cls/clear - Clear the terminal</p>
-      <p class="text-gray-100">update - Upload Google credentials file</p>
+      <p class="text-gray-100">upload - Upload Google credentials file</p>
       <p class="text-gray-100">whoami - Its me :O!</p>` 
   );
   info.append(tittle);
