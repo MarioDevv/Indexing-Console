@@ -14,6 +14,10 @@ $("#output").on("change", function (e) {
           $(actualTarget).val() == "cls"
         ) {
           clearPrompt();
+          return;
+        }
+        if ($(actualTarget).val() == "whoami") {
+          whoami();
         } else {
           $(actualTarget).attr("disabled", true);
           nextPrompt();
@@ -71,3 +75,36 @@ let clearPrompt = () => {
   $("#output").empty();
   nextPrompt();
 };
+
+// whoami Command
+let whoami = () => {
+  let div = $("<div></div>");
+  let text = $(`<p class="text-gray-100">Hi, I'm a simple indexer made with NodeJS</p>
+    <p>Joking, my name is <span class="text-green-400">Mario</span></p>
+    <p>And I'm a <span class="text-green-400">Full Stack Web App Developer</span> and a php lover</p>
+    <p>Check if its true :) --> <a href="https://github.com/PhPloveerPhP">https://github.com/PhPloveerPhP</a></p>`);
+  
+    div.append(text);
+  $("#output").append(div);
+  nextPrompt();
+};
+
+// PopOver Hover Event
+$("#info").on("click", function (e) {
+  let lastInput = $("#output input").last();
+  $(lastInput).val("Hello, lets help you my boy :)");
+  $(lastInput).attr("disabled", true);
+  let info = $("<div></div>");
+  let tittle = $(
+    '<h1 class="font-bold text-gray-100"> --------- Commands --------- </h1>'
+  );
+  let text = $(
+    `<p class="text-gray-100">ind [url] - Index a URL</p>
+      <p class="text-gray-100">cls/clear - Clear the terminal</p>
+      <p class="text-gray-100">whoami - Its me :O!</p>`
+  );
+  info.append(tittle);
+  info.append(text);
+  $("#output").append(info);
+  nextPrompt();
+});
