@@ -49,25 +49,26 @@ whoami - Its me :O!.
 **Info Button**. Just click it and get the info of all the commands
 
 <div style>
-    <img src="C:\Users\CP24\AppData\Roaming\Typora\typora-user-images\image-20230407081744430.png" alt="image-20230407081744430" />
+    <img src="https://i.imgur.com/8DFMFZh.png" />
 </div>
 
 **Upload**. Will return an input file to upload your key.
 
 <div>
-    <img src="C:\Users\CP24\AppData\Roaming\Typora\typora-user-images\image-20230407081952279.png" alt="image-20230407081952279" />
+    <img src="https://i.imgur.com/3xvuvOR.png" />
 </div>
 
 **Ind Command**. Type `ind` followed by the URLs you want to index.
 
 <div>
-    <img src="C:\Users\CP24\AppData\Roaming\Typora\typora-user-images\image-20230407082308528.png" 		alt="image-20230407082308528" />
+    <img src="https://i.imgur.com/Tpsd8jS.png" />
 </div>
 
 <div>
-    <img src="C:\Users\CP24\AppData\Roaming\Typora\typora-user-images\image-20230407082408239.png" alt="image-20230407082408239" />
+    <img src="https://i.imgur.com/cSv1ePx.png" />
 </div>
 
+https://imgur.com/a/Li71tsC
 
 
 ### :heart: Contributing
