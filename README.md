@@ -68,7 +68,6 @@ whoami - Its me :O!.
     <img src="https://i.imgur.com/cSv1ePx.png" />
 </div>
 
-https://imgur.com/a/Li71tsC
 
 
 ### :heart: Contributing
