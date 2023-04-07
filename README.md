@@ -44,19 +44,34 @@ upload - Prompts you the input to upload your credentials. *obligaroty*
 whoami - Its me :O!.
 ```
 
-## Examples
+### :eyes: Examples:
 
-[Examples of how the project can be used, including any sample input/output.]
+**Info Button**. Just click it and get the info of all the commands
 
-## Contributing
+<div style>
+    <img src="C:\Users\CP24\AppData\Roaming\Typora\typora-user-images\image-20230407081744430.png" alt="image-20230407081744430" />
+</div>
 
-[Instructions on how to contribute to the project, including any guidelines or standards that should be followed.]
+**Upload**. Will return an input file to upload your key.
 
-## Issues
+<div>
+    <img src="C:\Users\CP24\AppData\Roaming\Typora\typora-user-images\image-20230407081952279.png" alt="image-20230407081952279" />
+</div>
 
-[Instructions on how to report issues with the project, including any templates that should be used for bug reports or feature requests.]
+**Ind Command**. Type `ind` followed by the URLs you want to index.
 
-## License
+<div>
+    <img src="C:\Users\CP24\AppData\Roaming\Typora\typora-user-images\image-20230407082308528.png" 		alt="image-20230407082308528" />
+</div>
 
-[Information on the license that the project is released under, including any copyright or attribution notices that need to be included.]
+<div>
+    <img src="C:\Users\CP24\AppData\Roaming\Typora\typora-user-images\image-20230407082408239.png" alt="image-20230407082408239" />
+</div>
 
+
+
+### :heart: Contributing
+
+Anyone that wants to help me can do it.
+
+ Just code it and push it :).
