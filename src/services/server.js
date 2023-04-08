@@ -68,7 +68,8 @@ app.post("/api/index", (req, res) => {
       auth: { bearer: tokens.access_token },
       multipart: items,
     };
-
+    
+    // Show the results
     request(options, (err, resp, body) => {
       res.send(JSON.stringify(body));
     });

@@ -32,20 +32,25 @@ $("#output").on("change", function (e) {
 
 // Index URL Command
 let indexURL = async (urls) => {
-  const response = await fetch("http://localhost:3000/api/index", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      url: urls,
-      key: JSON.parse(localStorage.getItem("credentials")),
-    }),
-  });
-  const jsonData = await response.json();
-  jsonData.split("\n").forEach((line) => {
-    createMessage(line);
-  });
+  try {
+    const response = await fetch("http://localhost:3000/api/index", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        url: urls,
+        key: JSON.parse(localStorage.getItem("credentials")),
+      }),
+    });
+
+    const jsonData = await response.json();
+    jsonData.split("\n").forEach((line) => {
+      createMessage(line);
+    });
+  } catch (error) {
+    createMessage('Something went wrong, try again later :(. Check your server!');
+  }
 };
 
 // Next Command Prompt
