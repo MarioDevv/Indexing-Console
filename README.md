@@ -19,7 +19,7 @@ npm i
 Build styles.
 
 ```bash
-npx tailwindcss -i .\src\styles\input.css -o .\dist\output
+npx tailwindcss -i .\src\styles\input.css -o .\dist\output.css
 ```
 
 ### 📄 Usage:
