@@ -86,7 +86,7 @@ let whoami = () => {
   $("#output").append(div);
 };
 
-// PopOver Hover Event
+// Info click Event
 $("#info").on("click", function (e) {
   let lastInput = $("#output input").last();
   $(lastInput).val("Hello, lets help you my boy :)");

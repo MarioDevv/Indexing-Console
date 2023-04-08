@@ -9,13 +9,24 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.post("/api/index", (req, res) => {
+
+  // Create an array of URLs
   const url = req.body.url.split(/(\s+)/).filter(function (e) {
     return e.trim().length > 0;
   });
   url.shift();
 
+  // Get credentials
   const key = req.body.key;
+  if (!key) {
+    res.send(JSON.stringify("No credentials found. Please upload credentials."));
+    return;
+  }
+
+  // Create batch
   const batch = url;
+
+  // Create JWT client
   const jwtClient = new google.auth.JWT(
     key.client_email,
     null,
@@ -24,12 +35,15 @@ app.post("/api/index", (req, res) => {
     null
   );
 
+
+  // Authorize and send request
   jwtClient.authorize(function (err, tokens) {
     if (err) {
-      console.log(err);
+      res.send(JSON.stringify(err));
       return;
     }
 
+    // Create batch request
     const items = batch.map((line) => {
       return {
         "Content-Type": "application/http",
@@ -44,6 +58,7 @@ app.post("/api/index", (req, res) => {
       };
     });
 
+    // Send batch request
     const options = {
       url: "https://indexing.googleapis.com/batch",
       method: "POST",
