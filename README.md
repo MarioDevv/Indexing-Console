@@ -64,9 +64,6 @@ whoami - Its me :O!.
     <img src="https://i.imgur.com/Tpsd8jS.png" />
 </div>
 
-<div>
-    <img src="https://i.imgur.com/cSv1ePx.png" />
-</div>
 
 
 
